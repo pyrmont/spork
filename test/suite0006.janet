@@ -39,7 +39,7 @@
 (aeq (path/posix/ext "/home/pork/work/project.janet") ".janet")
 
 (aeq (path/posix/parts "/home/pork/.local/share")
-     @["" "home" "pork" ".local" "share"] true)
+     @["/" "home" "pork" ".local" "share"] true)
 
 (aeq (path/posix/parts ".local/share")
      @[".local" "share"] true)
