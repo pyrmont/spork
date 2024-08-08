@@ -71,7 +71,10 @@
   ~(defn ,(symbol pre "/parts")
      "Split a path into its parts."
      [path]
-     (string/split ,sep path)))
+     (def els (string/split ,sep path))
+     (if (= "" (first els))
+       (put els 0 ,sep)
+       els)))
 
 (defmacro- decl-normalize
   [pre sep sep-pattern lead]
